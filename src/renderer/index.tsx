@@ -1,5 +1,5 @@
 import { render } from 'react-dom';
-import App from './App';
-import './App.css';
+import './css/global.css';
+import RouterComponent from './routes/router';
 
-render(<App />, document.getElementById('root'));
+render(<RouterComponent />, document.getElementById('root'));

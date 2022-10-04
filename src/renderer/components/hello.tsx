@@ -1,6 +1,5 @@
 import React from 'react';
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import OSApi from './os-api';
+import OSApi from '../api/os-api';
 
 const Hello = () => {
   const [state, setState] = React.useState<any>([]);
@@ -62,12 +61,4 @@ const Hello = () => {
   );
 };
 
-export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Hello />} />
-      </Routes>
-    </Router>
-  );
-}
+export default Hello;
