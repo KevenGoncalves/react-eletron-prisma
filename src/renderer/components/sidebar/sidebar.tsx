@@ -89,6 +89,12 @@ const Sidebar = () => {
               route="/users"
             />
             <ListItem
+              cor="from-teal-500 to-teal-400"
+              icon="archive"
+              name="Stock"
+              route="/stock"
+            />
+            <ListItem
               cor="from-purple-500 to-purple-400"
               icon="box-arrow-left"
               name="Sair"

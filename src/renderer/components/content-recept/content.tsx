@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import AsksModal from '../asks-modal/asks-modal';
 import PaymentModal from '../payment-modal/payment-modal';
-import Autocomplete from '../utils/autocomplete';
 
 /* eslint-disable react/button-has-type */
 const Item = () => (
@@ -36,7 +36,9 @@ const ItemKitchen = () => (
 
 const Content = () => {
   const [modal, setModal] = useState(false);
+  const [asks, setAsks] = useState(false);
   const handleOpen = () => setModal(true);
+  const handleAsks = () => setAsks(true);
 
   return (
     <div>
@@ -61,9 +63,7 @@ const Content = () => {
           </button>
         </div>
       </div>
-      <div className="mt-10">
-        <Autocomplete />
-      </div>
+
       <div className="grid grid-cols-2 gap-10">
         <div className="py-10">
           <span className="text-3xl uppercase">
@@ -74,10 +74,17 @@ const Content = () => {
             <Item />
             <Item />
             <Item />
-            <div className="my-4 ">
+            <div className="my-4 flex gap-4">
               <button className="rounded-lg py-3 px-4 shadow bg-orange-500 text-white">
                 Cozinha
                 <i className="bi bi-shop ml-2" />
+              </button>
+              <button
+                onClick={handleAsks}
+                className="rounded-lg shadow px-4 py-3 text-white bg-emerald-500"
+              >
+                Adicionar
+                <i className="bi bi-plus-lg ml-2" />
               </button>
             </div>
           </div>
@@ -101,6 +108,7 @@ const Content = () => {
         </div>
       </div>
       <PaymentModal setState={setModal} state={modal} />
+      <AsksModal setState={setAsks} state={asks} />
     </div>
   );
 };

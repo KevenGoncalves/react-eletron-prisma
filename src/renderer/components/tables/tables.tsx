@@ -7,6 +7,9 @@ const Card = ({ nr }: { nr: number }) => (
     <Link to={`/mesa/${nr}`}>
       <div className="bg-gradient-to-r from-orange-400 to-orange-500  shadow-lg rounded-xl">
         <div className="relative h-44 w-full rounded overflow-hidden text-white flex items-center justify-center">
+          <div className="absolute top-2 right-2">
+            <div className="bg-emerald-500 rounded-lg p-1">Aberto</div>
+          </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={80}
