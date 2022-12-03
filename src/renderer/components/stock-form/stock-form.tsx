@@ -88,6 +88,12 @@ const StockForm = () => {
             </select>
           </div>
         </div>
+        <div className="w-full flex flex-row-reverse">
+          <button className="bg-orange-500 px-4 py-3 rounded-lg text-white">
+            Adicionar
+            <i className="bi bi-plus-lg ml-2" />
+          </button>
+        </div>
       </div>
       <TotalInventory />
     </div>
